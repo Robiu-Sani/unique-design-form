@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="mainBody">
+        <div class="sercal">
+            <div class="btn">
+                <button id="btn1">sing up</button>
+                <button id="btn2">login</button>
+            </div>
+        </div>
+        
+        <div class="loginbar">
+            <form action="" class="form2">
+                <h1>login</h1>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="submit">
+            </form>
+        </div>
+        <div class="sinupBar">
+            <form action="" class="form1">
+                <h1>sing up</h1>
+                <input type="text" placeholder="Name" required>
+                <input type="number" placeholder="Number" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="submit">
+            </form>
+        </div>
+        <div class="span"></div>
+
+    </div>
+
+    <script>
+        var sblock = document.querySelector(".sinupBar");
+        var lblock = document.querySelector(".loginbar");
+        var sercal = document.querySelector(".sercal");
+        var sidevar = document.querySelector(".span");
+        var form1 = document.querySelector(".form1");
+        var btn1 = document.querySelector("#btn1");
+        var btn2 = document.querySelector("#btn2");
+
+        btn1.addEventListener("click", () => {
+            sidevar.style.opacity="1";
+            sidevar.style.transition="all 1s";
+            sblock.style.width="100%";
+            sblock.style.transition="all 1s";
+            sercal.style.background="rgb(255, 204, 225)";
+            sercal.style.left="40%";
+            sercal.style.transition="all 1s";
+            btn1.style.display="none";
+            btn2.style.display="block";
+            form1.style.opacity="1";
+            form1.style.transition="all 1s";
+        });
+
+        btn2.addEventListener("click", () => {
+            sidevar.style.opacity="0";
+            sidevar.style.transition="all 1s";
+            sblock.style.width="5%";
+            sblock.style.transition="all 1s";
+            sercal.style.background="rgb(255, 0, 106)";
+            sercal.style.left="-25%";
+            sercal.style.transition="all 1s";
+            btn1.style.display="block";
+            btn2.style.display="none";
+            form1.style.opacity="0";
+            form1.style.transition="all 1s";
+        });
+
+
+    </script>
+</body>
+</html>
